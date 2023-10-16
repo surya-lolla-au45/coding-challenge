@@ -1,13 +1,6 @@
-Enter the value of mul table= 3
-3 x 1 = 3
-3 x 2 = 6
-3 x 3 = 9
-3 x 4 = 12
+ Enter the value of mul table= 5
+1 x 5 = 5
+2 x 5 = 10
 3 x 5 = 15
-3 x 6 = 18
-3 x 7 = 21
-3 x 8 = 24
-3 x 9 = 27
-3 x 10 = 30
-
-Process finished with exit code 0
+4 x 5 = 20
+5 x 5 = 25
