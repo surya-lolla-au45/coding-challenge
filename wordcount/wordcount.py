@@ -2,7 +2,6 @@ n="Data preprocessing is an important task in text classification. With the emer
 words=n.split()
 word_count = {}
 for i in words:
-    i = i.strip('.,!?").').lower()
     if i in word_count:
         word_count[i] += 1
     else:
