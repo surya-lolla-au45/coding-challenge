@@ -15,8 +15,7 @@ def word_count(paragraph, output_format='csv', sort_by='word', order='asc', limi
         word_count = dict(sorted(word_count.items()))
     elif sort_by == 'occurrence':
         word_count = dict(sorted(word_count.items(), key=lambda item: item[1]))
-
-
+        
     if order == 'desc':
         word_counts = dict(reversed(list(word_count.items())))
  
@@ -29,11 +28,12 @@ def word_count(paragraph, output_format='csv', sort_by='word', order='asc', limi
             csv_writer.writerow(['Word', 'Occurrence'])
             csv_writer.writerows(word_count.items())
         print('Word count saved to "word_count.csv" in CSV format.')
+        
     elif output_format == 'json':
         with open('word_count.json', 'w') as json_file:
             json.dump(word_counts, json_file, indent=2)
         print('Word count saved to "word_count.json" in JSON format.')
  
-paragraph = "This is a sample paragraph. It contains sample words for word count. The words can be counted based on specified options."
+paragraph = "Literature is full of repetition. Literary writers constantly use the literary device of repeated words. I think the only type of repetition which is bad is sloppy repetition. Repetition which is unintentional, which sounds awkward."
 
 word_count(paragraph, output_format='csv', sort_by='occurrence', order='desc', limit=5, filter_by='s*')
